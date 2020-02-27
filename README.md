@@ -1,1 +1,1 @@
-# COVID-10 Jeju Hospital Map
+# COVID-19 Jeju Hospital Map
