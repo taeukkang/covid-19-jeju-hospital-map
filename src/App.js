@@ -58,7 +58,7 @@ function App() {
             infoWindow.open(map, marker);
         });
 
-        setLocations((prev) => {
+        setLocations(prev => {
             return {
                 ...prev,
                 [location.이름]: {
@@ -71,19 +71,19 @@ function App() {
 
     useEffect(() => {
         if (map) {
-            data.hospital.map((location) => {
+            data.hospital.map(location => {
                 createMarker(location, "default");
             });
-            data.healthCenter.map((location) => {
+            data.healthCenter.map(location => {
                 createMarker(location, "black");
             });
-            data.ansimHospital.map((location) => {
+            data.ansimHospital.map(location => {
                 createMarker(location, "green");
             });
         }
     }, [map]);
 
-    const onListItemHover = (location) => {
+    const onListItemHover = location => {
         let loc = locations[location.이름];
         loc.infoWindow.open(map, loc.marker);
     };
@@ -120,16 +120,16 @@ function App() {
                         <Col md={4}>
                             <ListGroup
                                 style={{ overflowY: "scroll", height: "85vh" }}>
-                                {data.hospital.map((location) => {
+                                {data.hospital.map(location => {
                                     return listGroupItem(
                                         location,
                                         "선별진료소"
                                     );
                                 })}
-                                {data.healthCenter.map((location) => {
+                                {data.healthCenter.map(location => {
                                     return listGroupItem(location, "보건소");
                                 })}
-                                {data.ansimHospital.map((location) => {
+                                {data.ansimHospital.map(location => {
                                     return listGroupItem(
                                         location,
                                         "국민안심병원"
