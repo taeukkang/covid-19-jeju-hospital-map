@@ -13,7 +13,8 @@ function App() {
             lat: 33.377165,
             lng: 126.533382
         },
-        zoom: 10
+        zoom: 10,
+        zoomControl: true //줌 컨트롤의 표시 여부
     };
 
     useEffect(() => {
