@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "코로나19 제주병원",
+  "name": "코로나19 제주 보건소 및 지정병원",
   "icons": [
     {
       "src": "favicon.ico",
