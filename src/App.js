@@ -112,7 +112,7 @@ function App() {
             <header className="App-header">
                 <Navbar bg="light" expand="lg" className="mb-3">
                     <Navbar.Brand href="/">
-                        <FontAwesomeIcon icon={faPlusSquare} size="lg" className="mr-2" />코로나19 제주 보건소 및 지정병원
+                        <FontAwesomeIcon icon={faPlusSquare} size="lg" className="mr-2" />코로나19 제주 지정의료기관
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbomar-nav">
