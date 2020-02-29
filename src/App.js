@@ -1,6 +1,9 @@
 /* eslint-disable no-undef */
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col, ListGroup, Navbar, Nav } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faPlusSquare, faChartArea } from "@fortawesome/free-solid-svg-icons";
 import "./App.css";
 import data from "./hospital.json";
 
@@ -108,11 +111,20 @@ function App() {
         <div className="App">
             <header className="App-header">
                 <Navbar bg="light" expand="lg" className="mb-3">
-                    <Navbar.Brand href="#home">
-                        코로나19 제주 보건소 및 지정병원
+                    <Navbar.Brand href="/">
+                        <FontAwesomeIcon icon={faPlusSquare} size="lg" className="mr-2" />코로나19 제주 보건소 및 지정병원
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                    <Navbar.Collapse id="basic-navbar-nav"></Navbar.Collapse>
+                    <Navbar.Collapse id="basic-navbomar-nav">
+                        <Nav className="ml-auto">
+                            <Nav.Link href="https://livecorona.co.kr">
+                                <FontAwesomeIcon icon={faChartArea} size="lg" />
+                            </Nav.Link>
+                            <Nav.Link href="https://github.com/taeukme/covid-19-jeju-hospital-map/">
+                                <FontAwesomeIcon icon={faGithub} size="lg" />
+                            </Nav.Link>
+                        </Nav>
+                    </Navbar.Collapse>
                 </Navbar>
             </header>
             <main>
