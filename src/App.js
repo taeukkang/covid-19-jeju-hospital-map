@@ -110,9 +110,14 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
-                <Navbar bg="light" expand="lg" className="mb-3">
+                <Navbar bg="light" className="mb-3 navbar-mobile-thin">
                     <Navbar.Brand href="/">
-                        <FontAwesomeIcon icon={faPlusSquare} size="lg" className="mr-2" />코로나19 제주 지정의료기관
+                        <FontAwesomeIcon
+                            icon={faPlusSquare}
+                            size="lg"
+                            className="mr-2"
+                        />
+                        코로나19 제주 지정의료기관
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbomar-nav">
@@ -130,9 +135,10 @@ function App() {
             <main>
                 <Container fluid>
                     <Row>
-                        <Col md={4}>
+                        <Col sm={4} md={4}>
                             <ListGroup
-                                style={{ overflowY: "scroll", height: "85vh" }}>
+                                className="list-group-item-auto-height"
+                                style={{ overflowY: "scroll" }}>
                                 {data.hospital.map(location => {
                                     return listGroupItem(
                                         location,
@@ -150,10 +156,11 @@ function App() {
                                 })}
                             </ListGroup>
                         </Col>
-                        <Col md={8}>
+                        <Col sm={8} md={8}>
                             <div
                                 id="map"
-                                style={{ width: "100%", height: "85vh" }}
+                                className="map-auto-height"
+                                style={{ width: "100%" }}
                             />
                         </Col>
                     </Row>

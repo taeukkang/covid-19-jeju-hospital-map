@@ -1,0 +1,21 @@
+@media only screen and (max-width: 576px) {
+    .navbar-mobile-thin {
+        height: 35px;
+    }
+    .list-group-item-auto-height {
+        height: 25vh;
+        padding: 5px;
+    }
+    .map-auto-height {
+        height: 65vh;
+    }
+}
+
+@media (min-width: 576px) {
+    .list-group-item-auto-height {
+        height: 85vh;
+    }
+    .map-auto-height {
+        height: 85vh;
+    }
+}
